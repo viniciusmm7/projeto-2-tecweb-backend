@@ -7,35 +7,6 @@ from rest_framework.response import Response
 from .models import Game
 from .serializers import GameSerializer
 
-# def index(request):
-#     from api_keys import RAWG_API_KEY, RAPID_API_KEY
-#     page = 1
-#     try:
-#         while True:
-#             url = f'https://rawg-video-games-database.p.rapidapi.com/games?key={RAWG_API_KEY}&page={page}'
-#             page += 1
-
-#             headers = {
-#                 'X-RapidAPI-Key': RAPID_API_KEY,
-#                 'X-RapidAPI-Host': 'rawg-video-games-database.p.rapidapi.com'
-#             }
-
-#             response = req('GET', url, headers=headers)
-#             response_dict = loads(response.text)
-#             results = response_dict['results']
-
-#             for i in range(len(results)):
-#                 rawgID = results[i]['id']
-#                 slug = results[i]['slug']
-#                 title = results[i]['name']
-#                 rating = results[i]['rating']
-#                 ratingQty = results[i]['ratings_count']
-#                 game = Game(rawgID=rawgID, slug=slug, title=title, rating=rating, ratingQty=ratingQty)
-#                 game.save()
-        
-#     except Exception as e:
-#         print(e)
-
 
 @api_view(['GET', 'POST'])
 def api_games(request):
