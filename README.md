@@ -9,6 +9,8 @@ Esse projeto tem como objetivo criar uma página com frontend feito em React e b
 
 Nesse será utilizada a [RAWG API](https://rawg.io/apidocs), uma API para ter acesso a dados de jogos de videogame diversos.
 
+O nome do projeto será *Expand*.
+
 ## 2. Testando a API
 
 ### 2.1 Solicitando uma key da RAWG API
@@ -51,5 +53,3 @@ pip install -r requirements.txt
 ```
 2. Para de fato testar, rode o arquivo "exemplo.py".
 3. Verifique que o output é semelhante ao exemplo comentado no código
-
-## 3
