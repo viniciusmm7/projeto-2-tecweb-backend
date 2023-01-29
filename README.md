@@ -11,23 +11,7 @@ Nesse será utilizada a [RAWG API](https://rawg.io/apidocs), uma API para ter ac
 
 O nome do projeto será *Expand*.
 
-## 2. Testando a API
-
-### 2.1 Solicitando uma key da RAWG API
-1. Acessar o link: [https://rawg.io/login?forward=developer].
-2. Fazer login ou criar uma conta.
-3. Ler os [Termos de Uso](https://api.rawg.io/docs/ "Termos de Uso RAWG API") - se resumem a não usar a API para fazer um clone, o uso ser gratuito até 100.000 usuários ativos por mês ou 500.000 visualizações de página por mês e atribuir um hyperlink para cada página onde os dados forem utilizados.
-4. Preencher o formulário de forma adequada.
-5. Copiar a key e salvar num arquivo Python chamado "api_keys.py" com o nome da variável "RAWG_API_KEY".
-
-### 2.2 Solicitando uma key da RAPID API
-1. Acessar o link: [https://rapidapi.com/accujazz/api/rawg-video-games-database].
-2. Fazer login ou criar uma conta.
-3. Ler os [Termos de Serviço](https://website.rapidapi.com/terms/ "Termos de Serviço RAPID API").
-4. Copiar a "X-RapidAPI-Key" do teste de endpoint e salvar no mesmo arquivo Python "api_keys.py" com o nome da variável "RAPID_API_KEY".
-
-### 2.3 Rodando o teste
-O teste será feito solicitando informações de *Avaliações* do jogo *Grand Theft Auto V*.
+## 2. Rodando o backend
 
 1. Baixe esse repositório, crie e inicie um ambiente virtual e então instale as dependências:
 
@@ -51,5 +35,16 @@ python -m venv env
 env\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
-2. Para de fato testar, rode o arquivo "exemplo.py".
-3. Verifique que o output é semelhante ao exemplo comentado no código
+
+2. Crie o banco de dados com o seguinte comando:
+```bash
+python manage.py migrate
+```
+
+3. Rode com:
+```bash
+python manage.py runserver
+```
+___
+
+Pronto, basta rodar o backend e depois o frontend para ver a aplicação em total funcionamento!
